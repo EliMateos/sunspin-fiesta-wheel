@@ -1,47 +1,39 @@
-# SunSpin Fiesta Wheel
+# Ciao Bella Spin Club
 
-Ruleta interactiva de cumpleaños con estética veraniega tipo Positano.
+Ruleta interactiva de cumpleaños en español, lista para GitHub Pages.
 
-## Qué incluye
+## Importante
 
-- Ruleta en español.
-- Giro del círculo grande.
-- Pantalla de casilla ganadora con estética similar a la ruleta.
-- Pregunta aleatoria sobre la cumpleañera.
-- Confeti en premios.
-- Código estático listo para GitHub Pages.
+Esta versión incrusta la imagen de la ruleta dentro del CSS como `base64`, así evita fallos de ruta en GitHub Pages. Aunque existe una carpeta `assets/`, el diseño principal no depende de que GitHub encuentre la imagen externa.
 
-## Estructura
+## Estructura correcta para GitHub
+
+Sube estos archivos directamente a la raíz del repositorio:
 
 ```txt
-sunspin-fiesta-wheel/
-├── index.html
-├── styles/
-│   └── summer-campaign.css
-├── scripts/
-│   └── spin-experience.js
-├── assets/
-│   └── brand-wheel-positano-edition.jpeg
-└── README.md
+index.html
+styles/
+scripts/
+assets/
+README.md
 ```
 
-## Cómo subirlo a GitHub Pages
+No subas una carpeta contenedora con todo dentro.
 
-1. Crea un repositorio nuevo.
-2. Sube todos los archivos de esta carpeta.
-3. Ve a `Settings > Pages`.
-4. En `Build and deployment`, elige:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-5. Guarda.
-6. GitHub generará una URL pública para abrir la ruleta.
+## URL esperada
 
-## Editar preguntas
+Para el repositorio:
 
-Las preguntas están en `scripts/spin-experience.js`, dentro de la casilla:
-
-```js
-title: "Pregunta cumpleañera"
+```txt
+https://github.com/EliMateos/sunspin-fiesta-wheel
 ```
 
+la web debería quedar en:
+
+```txt
+https://elimateos.github.io/sunspin-fiesta-wheel/
+```
+
+## Activar GitHub Pages
+
+Settings → Pages → Deploy from a branch → main → /root → Save.
