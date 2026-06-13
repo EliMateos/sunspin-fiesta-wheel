@@ -2,13 +2,18 @@
 
 Ruleta interactiva de cumpleaños en español, lista para GitHub Pages.
 
-## Importante
+## Cambios incluidos
 
-Esta versión incrusta la imagen de la ruleta dentro del CSS como `base64`, así evita fallos de ruta en GitHub Pages. Aunque existe una carpeta `assets/`, el diseño principal no depende de que GitHub encuentre la imagen externa.
+- Configuración inicial de invitados.
+- Cálculo automático: consumiciones para ruleta = total - invitados × tickets.
+- Selector de probabilidad: 50%, 60% o 70% de premio.
+- Contador de consumiciones restantes.
+- Botón “Premio entregado” para descontar consumiciones solo cuando realmente se dan.
+- Si no quedan consumiciones, la ruleta solo elige casillas sin premio.
+- Casilla “Pregunta cumpleañera” con preguntas aleatorias.
+- Imagen incrustada en CSS para evitar fallos de ruta en GitHub Pages.
 
-## Estructura correcta para GitHub
-
-Sube estos archivos directamente a la raíz del repositorio:
+## Estructura
 
 ```txt
 index.html
@@ -18,22 +23,4 @@ assets/
 README.md
 ```
 
-No subas una carpeta contenedora con todo dentro.
-
-## URL esperada
-
-Para el repositorio:
-
-```txt
-https://github.com/EliMateos/sunspin-fiesta-wheel
-```
-
-la web debería quedar en:
-
-```txt
-https://elimateos.github.io/sunspin-fiesta-wheel/
-```
-
-## Activar GitHub Pages
-
-Settings → Pages → Deploy from a branch → main → /root → Save.
+Sube estos archivos directamente a la raíz del repositorio.

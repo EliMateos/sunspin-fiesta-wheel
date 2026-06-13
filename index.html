@@ -8,6 +8,47 @@
 </head>
 <body>
   <main class="app">
+    <section class="setupPanel" id="setupPanel">
+      <div class="setupTitle">🍹 Configuración de consumiciones</div>
+      <div class="setupGrid">
+        <label>
+          Invitados que han venido
+          <input id="guestInput" type="number" min="0" max="50" value="20">
+        </label>
+        <label>
+          Tickets por invitado
+          <input id="ticketsInput" type="number" min="0" max="10" value="2">
+        </label>
+        <label>
+          Total consumiciones
+          <input id="totalInput" type="number" min="0" max="200" value="50">
+        </label>
+      </div>
+
+      <div class="statusGrid">
+        <div class="statusCard">
+          <strong id="ticketsGiven">40</strong>
+          tickets iniciales
+        </div>
+        <div class="statusCard">
+          <strong id="rouletteDrinks">10</strong>
+          para ruleta
+        </div>
+        <div class="statusCard">
+          <strong id="winRate">50%</strong>
+          probabilidad premio
+        </div>
+      </div>
+
+      <div class="quickRates">
+        <button class="rateButton" data-rate="0.50">50% premio</button>
+        <button class="rateButton active" data-rate="0.60">60% premio</button>
+        <button class="rateButton" data-rate="0.70">70% premio</button>
+      </div>
+
+      <button id="startBtn" class="startBtn">Empezar ruleta</button>
+    </section>
+
     <div class="poster">
       <div id="wheel"></div>
       <div class="wheel-ring"></div>
@@ -17,6 +58,12 @@
     <button id="spinBtn">GIRAR</button>
 
     <div class="hint" id="hint">Al caer, la casilla seleccionada aparece con el mismo estilo de la ruleta 🎡</div>
+
+    <div class="partyDashboard">
+      <div><strong id="remainingDrinks">10</strong> consumiciones restantes</div>
+      <div><strong id="givenDrinks">0</strong> entregadas por ruleta</div>
+      <div><strong id="currentRate">60%</strong> probabilidad premio</div>
+    </div>
   </main>
 
   <section id="winnerScreen">
@@ -40,6 +87,7 @@
           <strong>Explicación:</strong> espera a que la ruleta se pare.
         </div>
         <div class="winnerPrize" id="winnerPrize">🍻</div>
+        <button id="claimBtn" class="claimBtn">Premio entregado</button>
         <button id="nextBtn">Siguiente jugador</button>
       </div>
     </div>
