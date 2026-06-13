@@ -149,9 +149,26 @@ function showWinner(prize) {
     const q = chooseQuestion(prize.questions);
     winnerDesc.textContent = q.question;
     winnerExplanation.innerHTML =
-      "<strong>Respuesta correcta:</strong><div class='answerBox'>" +
-      q.answer +
-      "</div><br>Si la persona responde correctamente, pulsa “Premio entregado”.";
+      "<strong>Pregunta secreta:</strong><br>" +
+      "Deja que la persona responda antes de revelar la solución." +
+      "<div class='answerControls'>" +
+      "<button id='showAnswerBtn' class='showAnswerBtn'>Mostrar respuesta</button>" +
+      "<div id='hiddenAnswer' class='hiddenAnswer'>" +
+      "<div class='answerBox'>" + q.answer + "</div>" +
+      "</div>" +
+      "</div>";
+
+    setTimeout(() => {
+      const showAnswerBtn = document.getElementById("showAnswerBtn");
+      const hiddenAnswer = document.getElementById("hiddenAnswer");
+
+      if (showAnswerBtn && hiddenAnswer) {
+        showAnswerBtn.addEventListener("click", () => {
+          hiddenAnswer.style.display = "block";
+          showAnswerBtn.style.display = "none";
+        });
+      }
+    }, 0);
   } else {
     winnerDesc.textContent = prize.desc;
     winnerExplanation.innerHTML = "<strong>Explicación:</strong> " + prize.explanation;
