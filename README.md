@@ -10,7 +10,7 @@ Ruleta interactiva de cumpleaños en español, lista para GitHub Pages.
 - Contador de consumiciones restantes.
 - Botón “Premio entregado” para descontar consumiciones solo cuando realmente se dan.
 - Si no quedan consumiciones, la ruleta solo elige casillas sin premio.
-- Casilla “Pregunta cumpleañera” con preguntas aleatorias y botón para revelar la respuesta.
+- Casilla “Pregunta cumpleañera” con preguntas aleatorias: la respuesta no se carga en pantalla hasta pulsar “Mostrar respuesta”.
 - Imagen incrustada en CSS para evitar fallos de ruta en GitHub Pages.
 
 ## Estructura
@@ -24,3 +24,5 @@ README.md
 ```
 
 Sube estos archivos directamente a la raíz del repositorio.
+
+- Jackpot eliminado y sustituido por “Favorita de la cumpleañera”.

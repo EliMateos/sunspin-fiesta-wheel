@@ -27,7 +27,7 @@ const segments = [
   { title: "Imitación", desc: "Imita a alguien del grupo durante 15 segundos.", explanation: "Imita a alguien del grupo durante 15 segundos. Tiene que adivinarse o hacer reír.", icon: "🎭", drinks: 1, c1: "#cdb4db", c2: "#ffc8dd", type: "win" },
   { title: "Roba premio", desc: "Elige a alguien para hacer el reto contigo.", explanation: "Elige a otra persona. Hacéis juntos un mini reto decidido por el grupo. Si lo conseguís, el premio es tuyo.", icon: "🎁", drinks: 1, c1: "#b7d989", c2: "#ffd166", type: "win" },
   { title: "Vuelve a girar", desc: "Tienes otra oportunidad.", explanation: "No cuenta como premio ni castigo. Cierra esta pantalla y gira otra vez.", icon: "🔄", drinks: 0, c1: "#ffd1cb", c2: "#ff9fb2", type: "lose" },
-  { title: "Jackpot", desc: "Ganas 2 consumiciones.", explanation: "Premio grande. Enseña esta pantalla a la cumpleañera y reclama 2 consumiciones.", icon: "👑", drinks: 2, c1: "#f06d5e", c2: "#ffd166", type: "win" },
+  { title: "Favorita de la cumpleañera", desc: "La cumpleañera decide tu reto.", explanation: "La cumpleañera te pone una prueba rápida en el momento. Si la superas, ganas 1 consumición.", icon: "👸", drinks: 1, c1: "#f06d5e", c2: "#ffd166", type: "win" },
   { title: "Mala suerte", desc: "No hay premio esta vez.", explanation: "La ruleta ha hablado. No hay consumición, pero puedes intentarlo en otra ronda si la cumpleañera lo permite.", icon: "💀", drinks: 0, c1: "#b7c9e2", c2: "#d8e2dc", type: "lose" }
 ];
 
@@ -153,9 +153,7 @@ function showWinner(prize) {
       "Deja que la persona responda antes de revelar la solución." +
       "<div class='answerControls'>" +
       "<button id='showAnswerBtn' class='showAnswerBtn'>Mostrar respuesta</button>" +
-      "<div id='hiddenAnswer' class='hiddenAnswer'>" +
-      "<div class='answerBox'>" + q.answer + "</div>" +
-      "</div>" +
+      "<div id='hiddenAnswer' class='hiddenAnswer'></div>" +
       "</div>";
 
     setTimeout(() => {
@@ -164,6 +162,7 @@ function showWinner(prize) {
 
       if (showAnswerBtn && hiddenAnswer) {
         showAnswerBtn.addEventListener("click", () => {
+          hiddenAnswer.innerHTML = "<div class='answerBox'>" + q.answer + "</div>";
           hiddenAnswer.style.display = "block";
           showAnswerBtn.style.display = "none";
         });
