@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SunSpin Fiesta Wheel</title>
+  <link rel="stylesheet" href="styles/summer-campaign.css">
+</head>
+<body>
+  <main class="app">
+    <div class="poster">
+      <div id="wheel"></div>
+      <div class="wheel-ring"></div>
+      <div class="pointer"></div>
+    </div>
+
+    <button id="spinBtn">GIRAR</button>
+
+    <div class="hint" id="hint">Al caer, la casilla seleccionada aparece con el mismo estilo de la ruleta 🎡</div>
+  </main>
+
+  <section id="winnerScreen">
+    <div class="winnerPoster">
+      <div class="decor lemons">🍋</div>
+      <div class="decor lobster">🦞</div>
+      <div class="decor vespa">🛵</div>
+
+      <div class="winnerContent">
+        <div class="winnerBadge">Casilla ganadora</div>
+
+        <div class="selectedSlice" id="selectedSlice">
+          <div class="sliceInner">
+            <div class="winnerIcon" id="winnerIcon">🎡</div>
+            <div class="winnerTitle" id="winnerTitle">Preparado</div>
+            <div class="winnerDesc" id="winnerDesc">Pulsa girar.</div>
+          </div>
+        </div>
+
+        <div class="winnerExplanation" id="winnerExplanation">
+          <strong>Explicación:</strong> espera a que la ruleta se pare.
+        </div>
+        <div class="winnerPrize" id="winnerPrize">🍻</div>
+        <button id="nextBtn">Siguiente jugador</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts/spin-experience.js"></script>
+</body>
+</html>
